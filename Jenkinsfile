@@ -8,7 +8,8 @@ pipeline{
     }
     stages{
         stage('Unit Testing'){
-            steps{
+            steps{ 
+                apt install python3.8-venv
                 sh "bash scripts/test.sh"
             }
         }   
