@@ -2,7 +2,9 @@ pipeline{
     agent any
     environment{
         
-        DOCKERHUB_CREDENTIALS = credentials('DOCKERHUB_CREDENTIALS')
+        registry = "Benson700/https://github.com/benson700/DevOps-Core-Practical-Project.git" 
+        registryCredential = 'dockerhub_id' 
+        dockerImage = '' 
     }
     stages{
         stage('Unit Testing'){

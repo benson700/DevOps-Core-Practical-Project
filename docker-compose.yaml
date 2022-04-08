@@ -20,7 +20,7 @@ services:
         build: ./service_1
         ports: 
         - target: 5000
-          published: 5000
+          published: 80
           protocol: tcp
         environment: 
             DATABASE_URI: 
@@ -29,6 +29,11 @@ services:
         container_name: 'service_2'
         image: 134042/service_2 
         build: ./service_2/
+        ports:
+        - target: 5000
+          published: 81
+          protocol: tcp  
+        
 
     service_3:
         container_name: 'service_3'
